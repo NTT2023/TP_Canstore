@@ -21,7 +21,7 @@ h1, h2 {
 
 h1 {
   font-size: 5rem;
-  background: url(icons/bean_can.png) no-repeat 20% center, url(icons/bean_can.png) no-repeat 80% center;
+  background: url(icons/bean_can.png) no-repeat 10% center, url(icons/bean_can.png) no-repeat 90% center;
   background-size: 48px 48px;
 }
 
@@ -146,7 +146,7 @@ section img {
   bottom: 0px;
 }
 
-section p {
+section p, section span  {
   color: yellow;
   background: black;
   width: 50px;
@@ -161,17 +161,23 @@ section p {
   z-index: 2000;
 }
 
-.vegetables {
+section span  { 
+  left: 10px;
+  font-size: large;
+  background: green;
+}
+
+.legumes {
   background: black url(icons/vegetable.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
 
-.meat {
+.viande {
   background: black url(icons/meat.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
 
-.soup {
+.soupe {
   background: black url(icons/soup.png) no-repeat 2px 2px;
   background-size: 24px 24px;
 }
