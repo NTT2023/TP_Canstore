@@ -60,21 +60,28 @@ function showProduct(finalGroup) {
   }
   else {
     finalGroup.forEach(product => {
-      var section = document.createElement('section');
+      var section = document.createElement('div');
       section.setAttribute('class', product.type);
-      var heading = document.createElement('h2');
+      section.classList.add("card");
+      section.classList.add("text-center");
+      var heading = document.createElement('div');
       heading.textContent = product.nom.replace(product.nom.charAt(0), product.nom.charAt(0).toUpperCase());
+      heading.className = 'card-title'; 
+      var foot = document.createElement('div');
+      foot.className = 'card-footer text-muted'; 
       var para = document.createElement('p');
       para.textContent = product.prix.toFixed(2) +"€";
       var nutri = document.createElement('span');
       nutri.textContent = product.nutriscore;
       var image = document.createElement('img');
+      image.className = 'card-img-top'; 
       image.src = "images/" + product.image;
       image.alt = product.nom;
       
       section.appendChild(heading);
-      section.appendChild(para);
-      section.appendChild(nutri);
+      section.appendChild(foot);
+      foot.appendChild(para);
+      foot.appendChild(nutri);
       section.appendChild(image);
       main.appendChild(section);
     });
